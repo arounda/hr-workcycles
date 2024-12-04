@@ -1,0 +1,44 @@
+@import './reset.scss';
+@import './utils/mixins';
+
+:root {
+  font-size: 10px;
+  /* reset: so that 10px = 1rem */
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --primary: #2B34FF;
+  --light-blue: #F1F8FF;
+  --white: #ffffff;
+  --black: #000000;
+  --dark: #090C18;
+}
+
+body {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  padding-inline: 1.6rem;
+}
+
+.heading-h1 {
+  color: var(--white);
+  font-family: var(--font-gilroy);
+  text-align: center;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 120%;
+}
