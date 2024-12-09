@@ -3,7 +3,8 @@ import { Inter } from "next/font/google"
 
 export const inter = Inter({
   subsets: [ 'latin' ],
-  display: 'swap'
+  display: 'swap',
+  variable: "--font-inter",
 });
 
 export const gilroy = localFont({
@@ -31,5 +32,4 @@ export const gilroy = localFont({
       weight: "bold"
     },
   ],
-}
-);
+});

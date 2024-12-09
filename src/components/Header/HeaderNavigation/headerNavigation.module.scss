@@ -1,0 +1,133 @@
+@import '@/styles/utils/mixins';
+
+.headerDesktopNav {
+  display: none;
+  gap: 24px;
+
+  @include onMediumDesktop {
+    display: flex;
+  }
+}
+
+.headerDropdownListItem svg {
+  transition: all 300ms ease;
+}
+
+.headerDropdownListItem:hover svg {
+  transform: rotate(180deg);
+}
+
+.headerDropdownListItem {
+  position: relative;
+}
+
+.headerDropdownListItem .solutionsDropdown {
+  display: none;
+  transition: all 300ms;
+}
+
+.headerDropdownListItem:hover .solutionsDropdown {
+  display: block;
+}
+
+// .headerDropdownListItem:hover a:not(.solutionsLink) {
+//   color: var(--primary);
+// }
+
+.solutionsDropdown {
+  padding-top: 1.6rem;
+  min-width: 250px;
+  position: absolute;
+}
+
+.solutionsDropdownList {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: 4px 4px 40px 0px rgba(68, 102, 140, 0.10);
+}
+
+.headerLink,
+.headerDropdownSolutionHeading,
+.solutionsLink {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--dark-v2);
+  transition: all var(--btn-hover-transition);
+
+  @include onMediumDesktop {
+    color: var(--white);
+  }
+}
+
+.solutionsLink {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--dark-v2);
+  transition: all var(--btn-hover-transition);
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+.headerLink.withChevron {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.headerLink:hover {
+  color: var(--primary);
+
+  @include onMediumDesktop {
+    color: var(--white);
+  }
+}
+
+.headerDropdown {
+  position: fixed;
+  inset: 0;
+  transition: all 300ms;
+
+  .headerDropdownWrapper,
+  .headerDropdownList,
+  .headerDropdownSolution {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .headerDropdownWrapper {
+    height: 100%;
+    background-color: #fff;
+    padding-top: 14rem;
+    padding-inline: 1.6rem;
+    overflow: scroll;
+
+    @include onTablet {
+      padding: 4rem 3.2rem;
+      height: auto;
+      border-radius: 0 0 24px 24px;
+    }
+
+    @include onLaptop {
+      height: 100%;
+      max-width: 446px;
+      margin-left: auto;
+      border-radius: 24px 0 0 24px;
+    }
+  }
+
+  .headerDropdownSolutionHeading {
+    opacity: .5;
+  }
+
+  .headerDropdownDivider {
+    height: 1px;
+    background: linear-gradient(90deg, rgba(214, 233, 255, 0.00) 0%, #BED9F5 50%, rgba(214, 233, 255, 0.00) 100%);
+  }
+}

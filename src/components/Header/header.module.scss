@@ -1,5 +1,47 @@
+@import '@/styles/utils/mixins';
+
 .header {
   position: fixed;
   width: 100%;
-  background-color: var(--white);
+  z-index: 50;
+}
+
+.headerBg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgb(255, 255, 255);
+  transition: all 500ms;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.6rem;
+}
+
+.headerMain {
+  display: flex;
+  gap: 2.4rem;
+
+  @include onMediumDesktop {
+    align-items: center;
+    gap: 11.4rem;
+  }
+}
+
+.headerCTAs {
+  display: flex;
+  gap: 1.2rem;
+
+  @include onMobile {
+    display: none;
+  }
+}
+
+.headerBurgerWrapper {
+  @include onMediumDesktop {
+    display: none;
+  }
 }
