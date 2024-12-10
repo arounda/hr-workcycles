@@ -1,8 +1,7 @@
+import heroImg from '@/assets/Homepage/hero-image.png';
 import ButtonPrimary from '@/components/ButtonPrimary/ButtonPrimary';
 import s from '@/styles/homepage.module.scss';
 import Image from 'next/image';
-import heroImg from '@/assets/Homepage/hero-image.png';
-import heroBgMob from '@/assets/Homepage/hero-mob-bg.png';
 
 export default function Home() {
   return (
@@ -131,10 +130,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div
-          className={s.heroBg}
-        />
+        <div className={s.heroBg} />
       </section>
+
+      <section className="section">
+        <div className="conatiner">
+          <h2 className='heading-h2'>
+            Your Trusted Partner for Workforce Solutions
+          </h2>
+        </div>
+      </section>
+
     </main>
   );
 }
