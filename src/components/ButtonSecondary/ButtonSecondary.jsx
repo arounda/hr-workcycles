@@ -18,7 +18,7 @@ const StyledButtonSecondary = styled.a`
   font-weight: 500;
   text-align: center;
   color: ${({ $isHeaderWhite }) => (
-    $isHeaderWhite ? 'var(--black)' : 'var(--white)'
+    $isHeaderWhite ? 'var(--primary)' : 'var(--white)'
   )};
   transition: var(--btn-hover-transition);
 

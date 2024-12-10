@@ -21,7 +21,7 @@ const StyledButtonPrimary = styled.a`
   font-weight: 500;
   text-align: center;
   color:  ${({ $isHeaderWhite }) => (
-    $isHeaderWhite ? 'var(--white)' : 'var(--black)'
+    $isHeaderWhite ? 'var(--white)' : 'var(--primary)'
   )};
   transition: var(--btn-hover-transition);
 

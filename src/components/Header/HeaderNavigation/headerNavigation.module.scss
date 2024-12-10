@@ -38,6 +38,7 @@
   padding-top: 1.6rem;
   min-width: 250px;
   position: absolute;
+  left: -24px;
 }
 
 .solutionsDropdownList {
@@ -116,7 +117,7 @@
 
     @include onLaptop {
       height: 100%;
-      max-width: 446px;
+      max-width: 480px;
       margin-left: auto;
       border-radius: 24px 0 0 24px;
     }

@@ -51,6 +51,30 @@ main {
   @include onLargeDesktop {
     padding-top: 16rem;
   }
+
+  &.is-light-blue {
+    background-color: var(--light-blue);
+  }
+
+  &.is-gradient-bg {
+    background: linear-gradient(0deg, #FFF 7.66%, #F1F8FF 96%);
+  }
+
+  &.is-padding-block {
+    padding-block: 10rem;
+
+    @include onTablet {
+      padding-block: 12rem;
+    }
+
+    @include onLaptop {
+      padding-block: 14rem;
+    }
+
+    @include onLargeDesktop {
+      padding-block: 16rem;
+    }
+  }
 }
 
 .container {
@@ -89,13 +113,16 @@ main {
 }
 
 .heading-h2 {
-  text-align: center;
   color: var(--black);
   font-family: var(--font-gilroy);
   font-size: 4.4rem;
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
+
+  &.is-centered {
+    text-align: center;
+  }
 
   @include onTablet {
     font-size: 4.6rem;
