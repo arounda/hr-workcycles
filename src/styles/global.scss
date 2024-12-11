@@ -74,7 +74,24 @@ main {
     @include onLargeDesktop {
       padding-block: 16rem;
     }
+
+    &.is-m {
+      padding-block: 8rem;
+
+      @include onTablet {
+        padding-block: 10rem;
+      }
+
+      @include onLaptop {
+        padding-block: 12rem;
+      }
+
+      @include onLargeDesktop {
+        padding-block: 14rem;
+      }
+    }
   }
+
 }
 
 .container {
@@ -135,4 +152,11 @@ main {
   @include onMediumDesktop {
     font-size: 5rem;
   }
+}
+
+.text {
+  color: var(--black);
+  font-family: var(--font-inter);
+  font-size: 1.6rem;
+  line-height: 150%;
 }

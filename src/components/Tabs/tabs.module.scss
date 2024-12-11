@@ -1,0 +1,67 @@
+@import '@/styles/utils/mixins';
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include onMediumDesktop {
+    flex-direction: row;
+    align-items: center;
+    gap: 8rem;
+  }
+}
+
+.tabsTop {
+  @include onMediumDesktop {
+    max-width: 540px;
+  }
+}
+
+.tabsSubHeading {
+  margin-top: .8rem;
+  margin-bottom: 3.2rem;
+}
+
+.tabsBtn {
+  padding: 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  border-radius: 24px;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.tabsBtnInfo {
+  & h3 {
+    font-family: var(--font-gilroy);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  & p {
+    font-size: 1.6rem;
+    line-height: 150%;
+  }
+}
+
+.tabsBtnIconWrapper {
+  position: relative;
+}
+
+.tabsBtnIconWhite {
+  position: absolute;
+  inset: 0;
+}
+
+.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.tabsImage {
+  width: 100%;
+  height: auto;
+}

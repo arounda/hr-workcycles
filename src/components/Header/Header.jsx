@@ -49,6 +49,7 @@ const Header = () => {
           <div className={s.headerMain}>
             <HeaderNavigation
               isMenuOpen={isMenuOpen}
+              setIsMenuOpen={setIsMenuOpen}
               isHeaderWhite={isHeaderWhite}
             />
 

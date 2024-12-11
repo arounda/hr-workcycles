@@ -22,11 +22,19 @@ const StyledBurger = styled.button`
   transition: all var(--btn-hover-transition);
 
   &:hover {
-    background-color: var(--white);
+    background-color: ${(props) => (
+      (props.$isMenuOpen || props.$isHeaderWhite)
+        ? "var(--primary)"
+        : "var(--white)"
+    )};
   }
 
   &:hover div {
-    background-color: var(--black);
+    background-color: ${(props) => (
+      (props.$isMenuOpen || props.$isHeaderWhite)
+        ? "var(--white)"
+        : "var(--primary)"
+    )};;
   }
 
   &:focus {
@@ -38,7 +46,7 @@ const StyledBurger = styled.button`
     height: 1px;
     background: ${(props) => (
       (props.$isMenuOpen || props.$isHeaderWhite)
-        ? "var(--dark-v2)"
+        ? "var(--primary)"
         : "var(--white)"
     )};
     border-radius: 2px;

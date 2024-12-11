@@ -5,6 +5,7 @@ import solutions3 from '@/assets/Homepage/solutions3.png';
 import solutions4 from '@/assets/Homepage/solutions4.png';
 import solutions5 from '@/assets/Homepage/solutions5.png';
 import ButtonPrimary from '@/components/ButtonPrimary/ButtonPrimary';
+import Tabs from '@/components/Tabs/Tabs';
 import s from '@/styles/homepage.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -85,8 +86,6 @@ export default function Home() {
                   </linearGradient>
                 </defs>
               </svg>
-
-
 
               <div className={s.heroStat}>
                 <p className={s.heroStatNum}>
@@ -326,7 +325,7 @@ export default function Home() {
                 </div>
               </Link>
             </div>
-            
+
             <div className={s.solutionsColumn}>
               <Link
                 href='#'
@@ -546,6 +545,12 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className='section is-light-blue is-padding-block is-m'>
+        <div className="container">
+          <Tabs />
         </div>
       </section>
     </main>

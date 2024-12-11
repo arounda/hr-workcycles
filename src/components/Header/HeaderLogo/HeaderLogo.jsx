@@ -24,12 +24,14 @@ const HeaderLogo = ({ isHeaderWhite }) => {
       <Image
         src={logoWhite}
         alt=''
+        priority
       />
 
       <Image
         className='logoBlack'
         src={logoBlack}
         alt=''
+        priority
       />
     </StyledHeaderLogo>
   )

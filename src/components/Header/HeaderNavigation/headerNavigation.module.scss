@@ -30,9 +30,13 @@
   display: block;
 }
 
-// .headerDropdownListItem:hover a:not(.solutionsLink) {
-//   color: var(--primary);
-// }
+
+//???
+.headerDesktopNav .headerDropdownListItem:hover a:not(.solutionsLink),
+.headerDropdownListItem:hover path {
+  color: #9CCBFF;
+  stroke: #9CCBFF;
+}
 
 .solutionsDropdown {
   padding-top: 1.6rem;
@@ -103,11 +107,14 @@
   }
 
   .headerDropdownWrapper {
+    position: relative;
+    z-index: 1;
     height: 100%;
     background-color: #fff;
-    padding-top: 14rem;
+    padding-top: 10.6rem;
     padding-inline: 1.6rem;
     overflow: scroll;
+    box-shadow: 4px 4px 40px 0px rgba(68, 102, 140, 0.10);
 
     @include onTablet {
       padding: 4rem 3.2rem;
@@ -121,6 +128,11 @@
       margin-left: auto;
       border-radius: 24px 0 0 24px;
     }
+  }
+
+  .headerDropdownOverlay {
+    position: absolute;
+    inset: 0;
   }
 
   .headerDropdownSolutionHeading {
