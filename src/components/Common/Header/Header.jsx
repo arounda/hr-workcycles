@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import s from './header.module.scss';
 
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
@@ -8,11 +8,11 @@ import ButtonSecondary from '../ButtonSecondary/ButtonSecondary';
 import Burger from './Burger/Burger';
 import HeaderLogo from './HeaderLogo/HeaderLogo';
 import HeaderNavigation from './HeaderNavigation/HeaderNavigation';
+import { clientLoginUrl, newHireLoginUrl } from '@/constants/buttonsLinks';
 
 const Header = () => {
   const [ isMenuOpen, setIsMenuOpen ] = useState(false);
   const [ isHeaderWhite, setIsHeaderWhite ] = useState(false);
-
 
   useEffect(() => {
     if (window.scrollY > 50) {
@@ -56,13 +56,13 @@ const Header = () => {
             <div className={s.headerCTAs}>
               <ButtonSecondary
                 text='Client Login'
-                link='#'
+                link={clientLoginUrl}
                 isHeaderWhite={isHeaderWhite}
               />
 
               <ButtonPrimary
                 text='New Hire Login'
-                link='#'
+                link={newHireLoginUrl}
                 isHeaderWhite={isHeaderWhite}
               />
             </div>

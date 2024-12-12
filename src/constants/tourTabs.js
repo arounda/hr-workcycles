@@ -44,4 +44,4 @@ export const tourTabs = [
     iconW: tourIcon4w,
     image: tour4,
   },
-]
+];

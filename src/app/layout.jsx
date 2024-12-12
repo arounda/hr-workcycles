@@ -1,5 +1,5 @@
-import Footer from '@/components/Footer/Footer';
-import Header from '@/components/Header/Header';
+import Footer from '@/components/Common/Footer/Footer';
+import Header from '@/components/Common/Header/Header';
 import "@/styles/global.scss";
 import { gilroy, inter } from './fonts/fonts';
 
@@ -13,7 +13,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.variable} ${gilroy.variable}`}>
         <Header />
-        {children}
+
+        <main>
+          {children}
+        </main>
+
         <Footer />
       </body>
     </html>

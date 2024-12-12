@@ -14,13 +14,19 @@
 
 .tabsTop {
   @include onMediumDesktop {
-    max-width: 540px;
+    max-width: 550px;
   }
 }
 
 .tabsSubHeading {
   margin-top: .8rem;
   margin-bottom: 3.2rem;
+}
+
+.tabsBtns {
+  display: flex;
+  flex-direction: column;
+  // gap: 0.2rem;
 }
 
 .tabsBtn {
@@ -31,6 +37,25 @@
   border-radius: 24px;
   color: var(--black);
   cursor: pointer;
+  transition: all 250ms;
+}
+
+.tabsBtn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.tabsBtn .tabsBtnIconWhite,
+.tabsBtn {
+  transition: all 250ms;
+}
+
+.tabsBtn .tabsBtnIconWhite {
+  opacity: 0;
+}
+
+.tabsBtn:hover .tabsBtnIconWhite {
+  opacity: 1;
 }
 
 .tabsBtnInfo {
