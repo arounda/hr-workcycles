@@ -1,3 +1,5 @@
+'use client';
+
 import heroImg from '@/assets/Homepage/hero-image.png';
 import ButtonPrimary from '@/components/Common/ButtonPrimary/ButtonPrimary';
 import Image from 'next/image';

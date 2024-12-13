@@ -12,15 +12,15 @@ import { clientLoginUrl, newHireLoginUrl } from '@/constants/buttonsLinks';
 import { usePathname } from 'next/navigation';
 
 const Header = () => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   const [ isMenuOpen, setIsMenuOpen ] = useState(false);
   const [ isHeaderWhite, setIsHeaderWhite ] = useState(pathname === '/' ? false : true);
 
   useEffect(() => {
-    if (pathname !== '/') {
-      return;
-    }
+    // if (pathname !== '/') {
+    //   return;
+    // }
 
     if (window.scrollY > 50) {
       setIsHeaderWhite(true);
@@ -28,7 +28,7 @@ const Header = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [ pathname ]);
+  }, []);
 
   function handleScroll() {
     if (window.scrollY < 50) {
