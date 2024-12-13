@@ -15,7 +15,7 @@ const Header = () => {
   // const pathname = usePathname();
 
   const [ isMenuOpen, setIsMenuOpen ] = useState(false);
-  const [ isHeaderWhite, setIsHeaderWhite ] = useState(pathname === '/' ? false : true);
+  const [ isHeaderWhite, setIsHeaderWhite ] = useState(false);
 
   useEffect(() => {
     // if (pathname !== '/') {
