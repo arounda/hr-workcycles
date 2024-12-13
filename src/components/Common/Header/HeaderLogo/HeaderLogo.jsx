@@ -1,7 +1,6 @@
 import logoBlack from '@/assets/header-logo-black.svg';
 import logoWhite from '@/assets/header-logo.svg';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const StyledHeaderLogo = styled.a`
