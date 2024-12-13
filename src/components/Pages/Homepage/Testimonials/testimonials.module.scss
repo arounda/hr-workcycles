@@ -1,0 +1,97 @@
+@import '@/styles/utils/mixins';
+
+.testimonialsWrapper {
+  @include onMediumDesktop {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+  }
+}
+
+.testimonialsTop {
+  margin-bottom: 4rem;
+
+  @include onMediumDesktop {
+    margin: 0;
+    max-width: 454px;
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.testimonialsMain {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include onMediumDesktop {
+    max-width: 58%;
+  }
+}
+
+.testimonialsSubheading {
+  margin-top: .8rem;
+}
+
+.testimonialsCards {
+  width: 100%;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.testimonialsCard {
+  min-height: 230px;
+  padding: 1.6rem;
+  border-radius: 24px;
+  background-color: var(--light-blue);
+
+  @include onTablet {
+    padding: 2.4rem;
+  }
+}
+
+.testimonialsCardPersonInfo {
+  padding-bottom: 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.testimonialsCardAvatar {
+  width: 62px;
+  height: 62px;
+}
+
+.testimonialsCardCreds {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.testimonialsCardName {
+  font-family: var(--font-gilroy);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.testimonialsCardRole {
+  font-size: 1.6rem;
+  line-height: 160%;
+}
+
+.testimonialsNavDesktopWrapper {
+  display: none;
+
+  @include onMediumDesktop {
+    display: block;
+  }
+}
+
+.testimonialsNavMobileWrapper {
+  @include onMediumDesktop {
+    display: none;
+  }
+}

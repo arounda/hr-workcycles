@@ -3,6 +3,8 @@ import ButtonPrimary from '@/components/Common/ButtonPrimary/ButtonPrimary';
 import Image from 'next/image';
 import s from './hero.module.scss';
 import { newHireLoginUrl } from '@/constants/buttonsLinks';
+import Lottie from 'lottie-react';
+import lottieBg from '@/assets/lottie/test2.json';
 
 
 const Hero = () => {
@@ -130,6 +132,11 @@ const Hero = () => {
       </div>
 
       <div className={s.heroBg} />
+
+      {/* <Lottie
+        animationData={lottieBg}
+        className={s.heroLottie}
+      /> */}
     </section>
   )
 }

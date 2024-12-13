@@ -10,8 +10,8 @@ const StyledHeaderLogo = styled.a`
     position: absolute;
     inset: 0;
     opacity: ${({ $isHeaderWhite }) => (
-      $isHeaderWhite ? '1' : '0'
-    )}
+    $isHeaderWhite ? '1' : '0'
+  )}
   }
 `;
 
