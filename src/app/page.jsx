@@ -1,8 +1,9 @@
+import Connect from '@/components/Pages/Homepage/Connect/Connect';
 import Hero from '@/components/Pages/Homepage/Hero/Hero';
 import Solutions from '@/components/Pages/Homepage/Solutions/Solutions';
-import TrustedPartner from '@/components/Pages/Homepage/TrustedPartner/TrustedPartner';
-import Tour from '@/components/Pages/Homepage/Tour/Tour';
 import Testimonials from '@/components/Pages/Homepage/Testimonials/Testimonials';
+import Tour from '@/components/Pages/Homepage/Tour/Tour';
+import TrustedPartner from '@/components/Pages/Homepage/TrustedPartner/TrustedPartner';
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
       <Tour />
 
       <Testimonials />
+
+      <Connect />
     </>
   );
 }
