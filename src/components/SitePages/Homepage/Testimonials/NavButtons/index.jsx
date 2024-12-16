@@ -1,6 +1,6 @@
 'use client';
 
-import s from './NavButtons.module.scss';
+import s from './navbuttons.module.scss';
 
 const NavButtons = ({ swiperRef }) => {
   return (
