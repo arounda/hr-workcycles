@@ -1,3 +1,5 @@
+'use client';
+
 import Connect from '@/components/Pages/Homepage/Connect/Connect';
 import Hero from '@/components/Pages/Homepage/Hero/Hero';
 import Solutions from '@/components/Pages/Homepage/Solutions/Solutions';

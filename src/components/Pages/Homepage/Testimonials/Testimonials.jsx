@@ -2,11 +2,12 @@
 
 import { testimonials } from '@/constants/testimonials';
 import Image from 'next/image';
-import { useRef } from 'react';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useRef } from 'react';
+import NavButtons from './NavButtons';
+
 import s from './testimonials.module.scss';
-import Navigation from './Navigation/Navigation';
 
 const Testimonials = () => {
   const swiperRef = useRef();
@@ -28,7 +29,7 @@ const Testimonials = () => {
 
 
             <div className={s.testimonialsNavDesktopWrapper}>
-              <Navigation swiperRef={swiperRef} />
+              <NavButtons swiperRef={swiperRef} />
             </div>
           </div>
 
@@ -79,7 +80,7 @@ const Testimonials = () => {
             </Swiper>
 
             <div className={s.testimonialsNavMobileWrapper}>
-              <Navigation swiperRef={swiperRef} />
+              <NavButtons swiperRef={swiperRef} />
             </div>
           </div>
         </div>
