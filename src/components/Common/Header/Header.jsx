@@ -9,19 +9,12 @@ import Burger from './Burger/Burger';
 import HeaderLogo from './HeaderLogo/HeaderLogo';
 import HeaderNavigation from './HeaderNavigation/HeaderNavigation';
 import { clientLoginUrl, newHireLoginUrl } from '@/constants/buttonsLinks';
-import { usePathname } from 'next/navigation';
 
 const Header = () => {
-  // const pathname = usePathname();
-
   const [ isMenuOpen, setIsMenuOpen ] = useState(false);
   const [ isHeaderWhite, setIsHeaderWhite ] = useState(false);
 
   useEffect(() => {
-    // if (pathname !== '/') {
-    //   return;
-    // }
-
     if (window.scrollY > 50) {
       setIsHeaderWhite(true);
     }

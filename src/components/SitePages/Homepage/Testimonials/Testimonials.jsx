@@ -5,15 +5,15 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import NavButtons from './NavButtons';
 import s from './testimonials.module.scss';
-import Navigation from './Navigation/Navigation';
 
 const Testimonials = () => {
   const swiperRef = useRef();
 
   return (
     <section className='section'>
-      <div className="container">
+      <div className="container">®
         <div className={s.testimonialsWrapper}>
           <div className={s.testimonialsTop}>
             <div>
@@ -28,7 +28,7 @@ const Testimonials = () => {
 
 
             <div className={s.testimonialsNavDesktopWrapper}>
-              <Navigation swiperRef={swiperRef} />
+              <NavButtons swiperRef={swiperRef} />
             </div>
           </div>
 
@@ -79,10 +79,11 @@ const Testimonials = () => {
             </Swiper>
 
             <div className={s.testimonialsNavMobileWrapper}>
-              <Navigation swiperRef={swiperRef} />
+              <NavButtons swiperRef={swiperRef} />
             </div>
           </div>
         </div>
+        {/* )} */}
       </div>
     </section >
   )
