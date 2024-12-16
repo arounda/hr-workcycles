@@ -155,7 +155,14 @@ main {
 
 .text {
   color: var(--black);
-  // font-family: var(--font-inter);
   font-size: 1.6rem;
   line-height: 150%;
+}
+
+.is-centered {
+  text-align: center;
+}
+
+.is-white {
+  color: var(--white);
 }

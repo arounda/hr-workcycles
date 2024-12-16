@@ -30,7 +30,7 @@ const StyledButtonSecondary = styled.a`
   }
 `;
 
-const ButtonPrimary = ({ text, link, isHeaderWhite }) => {
+const ButtonSecondary = ({ text, link, isHeaderWhite }) => {
   return (
     <StyledButtonSecondary
       href={link}
@@ -41,4 +41,4 @@ const ButtonPrimary = ({ text, link, isHeaderWhite }) => {
   )
 }
 
-export default ButtonPrimary
+export default ButtonSecondary

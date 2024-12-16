@@ -1,0 +1,65 @@
+@import '@/styles/utils/mixins';
+
+.connectWrapper {
+  width: 100%;
+  padding: 5.2rem 3.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  border-radius: 24px;
+  background: linear-gradient(105deg, #242BFF 15.02%, #2F0092 109.42%);
+  // background-image: url('../../../../assets/Homepage/connect-bg-mob.png');
+
+  @include onLaptop {
+    flex-direction: row;
+    padding: 9rem 4rem;
+    justify-content: center;
+  }
+
+  @include onLargeDesktop {
+    gap: 8rem;
+    padding: 14.6rem 8rem;
+  }
+}
+
+.connectMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include onLaptop {
+    order: 1;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+#connectHeading {
+  @include onLaptop {
+    text-align: left;
+  }
+}
+
+.connectSubtitle {
+  margin-top: .8rem;
+  margin-bottom: 3.2rem;
+
+  @include onLaptop {
+    text-align: left;
+  }
+}
+
+.connectImageWrapper {
+  display: grid;
+  place-items: center;
+
+  @include onLaptop {
+    order: 0;
+  }
+}
+
+.connectImage {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}

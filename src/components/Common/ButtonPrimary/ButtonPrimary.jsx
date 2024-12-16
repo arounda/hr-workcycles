@@ -21,7 +21,15 @@ const StyledButtonPrimary = styled.a`
   color:  ${({ $isHeaderWhite }) => (
     $isHeaderWhite ? 'var(--white)' : 'var(--primary)'
   )};
-  transition: var(--btn-hover-transition);
+  transition: all var(--btn-hover-transition);
+
+  & path {
+    transition: all var(--btn-hover-transition);
+  }
+
+  &:hover path {
+    stroke: var(--white);
+  }
 
   &:hover {
     color: ${({ $isHeaderWhite }) => (
@@ -33,13 +41,19 @@ const StyledButtonPrimary = styled.a`
   }
 `;
 
-const ButtonPrimary = ({ text, link, isHeaderWhite }) => {
+const ButtonPrimary = ({ text, link, isHeaderWhite, hasIcon = false }) => {
   return (
     <StyledButtonPrimary
       href={link}
       $isHeaderWhite={isHeaderWhite}
     >
       {text}
+
+      {hasIcon && (
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 17L17 7M17 7L7 7M17 7V17" stroke="#2D34FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      )}
     </StyledButtonPrimary>
   )
 }
