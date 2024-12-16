@@ -1,8 +1,8 @@
 'use client';
 
-import s from './navigation.module.scss';
+import s from './NavButtons.module.scss';
 
-const Navigation = ({ swiperRef }) => {
+const NavButtons = ({ swiperRef }) => {
   return (
     <div className={`${s.testimonialsNav}`}>
       <button
@@ -24,7 +24,6 @@ const Navigation = ({ swiperRef }) => {
             strokeLinejoin="round"
           />
         </svg>
-
       </button>
 
       <button
@@ -46,10 +45,9 @@ const Navigation = ({ swiperRef }) => {
             strokeLinejoin="round"
           />
         </svg>
-
       </button>
     </div>
   );
 }
 
-export default Navigation
+export default NavButtons

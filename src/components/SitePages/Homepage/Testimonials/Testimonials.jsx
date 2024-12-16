@@ -2,12 +2,11 @@
 
 import { testimonials } from '@/constants/testimonials';
 import Image from 'next/image';
+import { useRef } from 'react';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useRef } from 'react';
-import NavButtons from './NavButtons';
-
 import s from './testimonials.module.scss';
+import NavButtons from './NavButtons';
 
 const Testimonials = () => {
   const swiperRef = useRef();
