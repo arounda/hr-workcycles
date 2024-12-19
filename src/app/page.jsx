@@ -1,9 +1,10 @@
-import Connect from '@/components/SitePages/Homepage/Connect/Connect';
-import Hero from '@/components/SitePages/Homepage/Hero/Hero';
-import Solutions from '@/components/SitePages/Homepage/Solutions/Solutions';
-import Testimonials from '@/components/SitePages/Homepage/Testimonials/Testimonials';
-import Tour from '@/components/SitePages/Homepage/Tour/Tour';
-import TrustedPartner from '@/components/SitePages/Homepage/TrustedPartner/TrustedPartner';
+import Connect from '@/components/Pages/Homepage/Connect/Connect';
+import Hero from '@/components/Pages/Homepage/Hero/Hero';
+import News from '@/components/Pages/Homepage/News/News';
+import Solutions from '@/components/Pages/Homepage/Solutions/Solutions';
+import Testimonials from '@/components/Pages/Homepage/Testimonials/Testimonials';
+import Tour from '@/components/Pages/Homepage/Tour/Tour';
+import TrustedPartner from '@/components/Pages/Homepage/TrustedPartner/TrustedPartner';
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       <Testimonials />
 
       <Connect />
+
+      <News />
     </>
   );
 }

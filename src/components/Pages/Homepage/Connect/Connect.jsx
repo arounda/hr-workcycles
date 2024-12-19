@@ -36,6 +36,8 @@ const Connect = () => {
               alt=''
             />
           </div>
+
+          <div className={s.connectBg}></div>
         </div>
       </div>
     </section>

@@ -29,7 +29,7 @@
 .heroLottie {
   display: none;
 
-  @include onMediumDesktop {
+  @include onLaptop {
     display: block;
   }
 }
@@ -50,16 +50,18 @@
   }
 
   @include onLaptop {
-    background-image: url('../../../../assets/Homepage/hero-laptop-bg.png');
-  }
-
-  @include onLargeDesktop {
-    background-image: url('../../../../assets/Homepage/hero-desktop-bg.png');
+    // background-image: url('../../../../assets/Homepage/hero-laptop-bg.png');
+      background-image: none;
   }
 
   // @include onMediumDesktop {
   //   background-image: none;
   // }
+
+  // @include onLargeDesktop {
+  //   background-image: url('../../../../assets/Homepage/hero-desktop-bg.png');
+  // }
+
 }
 
 .heroMain,

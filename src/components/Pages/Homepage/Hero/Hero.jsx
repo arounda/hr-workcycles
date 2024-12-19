@@ -1,12 +1,22 @@
 'use client';
 
-import heroImg from '@/assets/Homepage/hero-image.png';
-import ButtonPrimary from '@/components/Common/ButtonPrimary/ButtonPrimary';
-import Image from 'next/image';
-import s from './hero.module.scss';
+import { useEffect, useState } from 'react';
 import { newHireLoginUrl } from '@/constants/buttonsLinks';
+import Image from 'next/image';
+import Lottie from 'lottie-react';
+import heroImg from '@/assets/Homepage/hero-image.png';
+import heroLottie from '@/assets/lottie/v005.json';
+import heroLottie1 from '@/assets/lottie/v006.json';
+import ButtonPrimary from '@/components/Common/ButtonPrimary/ButtonPrimary';
+import s from './hero.module.scss';
 
 const Hero = () => {
+  const [ isLoading, setIsLoading ] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
+
   return (
     <section className={s.hero}>
       <div className="container">
@@ -131,6 +141,13 @@ const Hero = () => {
       </div>
 
       <div className={s.heroBg} />
+      {!isLoading && (
+        <Lottie
+          className={s.heroLottie}
+          animationData={heroLottie}
+          loop={true}
+        />
+      )}
     </section>
   )
 }
