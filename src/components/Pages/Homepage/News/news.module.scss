@@ -1,13 +1,81 @@
-.newsCards {}
+@import '@/styles/utils/mixins';
 
-.newsCard {}
+.newsCards {
+  width: 100%;
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
 
-.newsCardImageWrapper {}
+  @include onTablet {
+    gap: 1.6rem;
+  }
 
-.newsCardTag {}
+  @include onLaptop {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
-.newsCardHeading {}
+.newsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 
-.newsCardText {}
+  @include onTablet {
+    flex-direction: row;
+  }
 
-.newsCardDate {}
+  @include onLaptop {
+    flex-direction: column;
+  }
+}
+
+.newsCardImageWrapper {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 16px;
+
+  @include onTablet {
+    min-width: 344px;
+  }
+
+  @include onLaptop {
+    min-width: 100%;
+  }
+}
+
+.newsCardImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.newsCardTag {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  padding: .8rem 1.2rem;
+  background-color: #F4F5F7;
+  border-radius: 100px;
+  font-size: 1.4rem;
+  line-height: 150%;
+}
+
+.newsCardHeading {
+  margin-bottom: .8rem;
+  font-family: var(--font-gilroy);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.newsCardText {
+  margin-bottom: 3.2rem;
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+.newsCardDate {
+  font-size: 1.4rem;
+  line-height: 160%;
+  opacity: .5;
+}

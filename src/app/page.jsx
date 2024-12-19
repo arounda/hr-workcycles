@@ -5,6 +5,7 @@ import Solutions from '@/components/Pages/Homepage/Solutions/Solutions';
 import Testimonials from '@/components/Pages/Homepage/Testimonials/Testimonials';
 import Tour from '@/components/Pages/Homepage/Tour/Tour';
 import TrustedPartner from '@/components/Pages/Homepage/TrustedPartner/TrustedPartner';
+import Mission from '@/components/Pages/Mission/Mission';
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
       <Connect />
 
       <News />
+
+      {/* <Mission /> */}
     </>
   );
 }
