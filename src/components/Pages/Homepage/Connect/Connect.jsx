@@ -2,7 +2,7 @@
 
 import ButtonPrimary from '@/components/Common/ButtonPrimary/ButtonPrimary';
 import s from './connect.module.scss';
-import connectImage from '@/assets/Homepage/connect-image.png';
+import connectImage from '@/assets/Homepage/connect-img.png';
 import Image from 'next/image';
 
 const Connect = () => {

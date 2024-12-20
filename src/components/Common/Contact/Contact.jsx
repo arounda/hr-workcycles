@@ -2,7 +2,7 @@
 
 import ButtonPrimary from '@/components/Common/ButtonPrimary/ButtonPrimary';
 import s from './contact.module.scss';
-import contactImage from '@/assets/contact-image.png';
+import contactImage from '@/assets/contact-img.png';
 import Image from 'next/image';
 
 const Contact = () => {
