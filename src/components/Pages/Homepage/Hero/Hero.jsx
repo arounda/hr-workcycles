@@ -3,10 +3,8 @@
 import { useEffect, useState } from 'react';
 import { newHireLoginUrl } from '@/constants/buttonsLinks';
 import Image from 'next/image';
-// import Lottie from 'lottie-react';
 import heroImg from '@/assets/Homepage/hero-image.png';
-import heroLottie from '@/assets/lottie/v005.json';
-// import heroLottie1 from '@/assets/lottie/v006.json';
+import heroLottie from '@/assets/lottie/wave_new.json';
 import ButtonPrimary from '@/components/Common/ButtonPrimary/ButtonPrimary';
 import s from './hero.module.scss';
 

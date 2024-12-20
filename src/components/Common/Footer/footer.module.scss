@@ -1,3 +1,7 @@
+@import '@/styles/utils/mixins';
+
 .footer {
-  // background-color: green;
+  padding-block: 4rem;
+  background-color: var(--dark);
+  color: var(--white);
 }

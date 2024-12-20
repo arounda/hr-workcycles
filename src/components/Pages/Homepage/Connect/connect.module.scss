@@ -19,7 +19,7 @@
   }
 
   @include onLaptop {
-    flex-direction: row;
+    flex-direction: row-reverse;
     padding: 9rem 4rem;
     justify-content: center;
     background-image: url('../../../../assets/Homepage/connect-bg-laptop.png');
@@ -46,7 +46,6 @@
   align-items: center;
 
   @include onLaptop {
-    order: 1;
     align-items: flex-start;
     justify-content: center;
   }
@@ -70,10 +69,6 @@
 .connectImageWrapper {
   display: grid;
   place-items: center;
-
-  @include onLaptop {
-    order: 0;
-  }
 }
 
 .connectImage {
