@@ -1,39 +1,42 @@
 import logoBlack from '@/assets/header-logo-black.svg';
 import logoWhite from '@/assets/header-logo.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
-const StyledHeaderLogo = styled.a`
+const StyledHeaderLogo = styled.div`
   position: relative;
 
   & .logoBlack {
     position: absolute;
     inset: 0;
-    opacity: ${({ $isHeaderWhite }) => (
-    $isHeaderWhite ? '1' : '0'
+    opacity: ${({ $isHeaderWhite, $isHome }) => (
+    $isHeaderWhite || !$isHome ? '1' : '0'
   )}
   }
 `;
 
-const HeaderLogo = ({ isHeaderWhite }) => {
+const HeaderLogo = ({ isHeaderWhite, isHome }) => {
   return (
-    <StyledHeaderLogo
-      href='/'
-      $isHeaderWhite={isHeaderWhite}
-    >
-      <Image
-        src={logoWhite}
-        alt=''
-        priority
-      />
+    <Link href='/'>
+      <StyledHeaderLogo
+        $isHeaderWhite={isHeaderWhite}
+        $isHome={isHome}
+      >
+        <Image
+          src={logoWhite}
+          alt=''
+          priority
+        />
 
-      <Image
-        className='logoBlack'
-        src={logoBlack}
-        alt=''
-        priority
-      />
-    </StyledHeaderLogo>
+        <Image
+          className='logoBlack'
+          src={logoBlack}
+          alt=''
+          priority
+        />
+      </StyledHeaderLogo>
+    </Link>
   )
 }
 

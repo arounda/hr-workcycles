@@ -24,7 +24,7 @@ const Connect = () => {
 
             <ButtonPrimary
               text='Learn More'
-              link='#'
+              link='/integrations'
               hasIcon={true}
             />
           </div>

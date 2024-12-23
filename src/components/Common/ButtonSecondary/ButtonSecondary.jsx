@@ -1,6 +1,7 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
-const StyledButtonSecondary = styled.a`
+const StyledButtonSecondary = styled.div`
   min-width: 160px;
   min-height: 50px;
   padding: 10px 24px;
@@ -22,22 +23,21 @@ const StyledButtonSecondary = styled.a`
 
   &:hover {
     color: ${({ $isHeaderWhite }) => (
-      $isHeaderWhite ? 'var(--white)' : 'var(--primary)'
-    )};
+    $isHeaderWhite ? 'var(--white)' : 'var(--primary)'
+  )};
     background-color: ${({ $isHeaderWhite }) => (
-      $isHeaderWhite ? 'var(--primary)' : 'var(--white)'
-    )};
+    $isHeaderWhite ? 'var(--primary)' : 'var(--white)'
+  )};
   }
 `;
 
 const ButtonSecondary = ({ text, link, isHeaderWhite }) => {
   return (
-    <StyledButtonSecondary
-      href={link}
-      $isHeaderWhite={isHeaderWhite}
-    >
-      {text}
-    </StyledButtonSecondary>
+    <Link href={link}>
+      <StyledButtonSecondary $isHeaderWhite={isHeaderWhite}>
+        {text}
+      </StyledButtonSecondary>
+    </Link>
   )
 }
 

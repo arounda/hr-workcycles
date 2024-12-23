@@ -1,6 +1,7 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
-const StyledButtonPrimary = styled.a`
+const StyledButtonPrimary = styled.div`
   min-width: 160px;
   min-height: 50px;
   padding: 10px 24px;
@@ -29,8 +30,8 @@ const StyledButtonPrimary = styled.a`
 
   &:hover path {
     stroke: ${({ $isButtonBlue }) => (
-      $isButtonBlue ? 'var(--primary)' : 'var(--white)'
-    )};
+    $isButtonBlue ? 'var(--primary)' : 'var(--white)'
+  )};
   }
 
   &:hover {
@@ -48,30 +49,31 @@ const ButtonPrimary = ({
   link,
   isHeaderWhite,
   hasIcon = false,
-  isButtonBlue = false
+  isButtonBlue = false,
 }) => {
   const iconColor = isButtonBlue ? 'white' : '#2B34FF';
 
   return (
-    <StyledButtonPrimary
-      href={link}
-      $isHeaderWhite={isHeaderWhite}
-      $isButtonBlue={isButtonBlue}
-    >
-      {text}
+    <Link href={link}>
+      <StyledButtonPrimary
+        $isHeaderWhite={isHeaderWhite}
+        $isButtonBlue={isButtonBlue}
+      >
+        {text}
 
-      {hasIcon && (
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M7 17L17 7M17 7L7 7M17 7V17"
-            stroke={iconColor}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      )}
-    </StyledButtonPrimary>
+        {hasIcon && (
+          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 17L17 7M17 7L7 7M17 7V17"
+              stroke={iconColor}
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        )}
+      </StyledButtonPrimary>
+    </Link>
   )
 }
 

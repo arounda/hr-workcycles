@@ -2,7 +2,7 @@ export const nonSolutionsLinks = [
   {
     id: 'ns1',
     title: 'Integrations',
-    url: '#integrations',
+    url: '/integrations',
   },
   {
     id: 'ns2',

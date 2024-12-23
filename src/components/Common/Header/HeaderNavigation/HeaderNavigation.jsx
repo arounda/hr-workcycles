@@ -7,8 +7,8 @@ import { nonSolutionsLinks } from '@/constants/nonSolutionsLinks';
 const StyledSpan = styled.span`
   font-size: 1.6rem;
   font-weight: 500;
-  color: ${({ $isHeaderWhite }) => (
-    $isHeaderWhite ? 'var(--dark)' : 'var(--white)'
+  color: ${({ $isHeaderWhite, $isHome }) => (
+    $isHeaderWhite || !$isHome ? 'var(--dark)' : 'var(--white)'
   )};
   transition: all var(--btn-hover-transition);
 `;
@@ -16,14 +16,18 @@ const StyledSpan = styled.span`
 const HeaderNavigation = ({
   isMenuOpen,
   setIsMenuOpen,
-  isHeaderWhite
+  isHeaderWhite,
+  isHome
 }) => {
   return (
     <nav className={s.headerNav}>
       <ul className={s.headerDesktopNav}>
         <li className={s.headerNavListItem}>
           <div className={`${s.headerNavLink} ${s.withChevron}`}>
-            <StyledSpan $isHeaderWhite={isHeaderWhite}>
+            <StyledSpan
+              $isHeaderWhite={isHeaderWhite}
+              $isHome={isHome}
+            >
               Solutions
             </StyledSpan>
 
@@ -36,7 +40,7 @@ const HeaderNavigation = ({
             >
               <path
                 d="M3.00006 6L6.7046 9.67453C7.1421 10.1085 7.85801 10.1085 8.29551 9.67453L12.0001 6"
-                stroke={isHeaderWhite ? 'var(--dark-v2)' : "white"}
+                stroke={isHeaderWhite || !isHome ? 'var(--dark-v2)' : "white"}
                 strokeWidth="1.5"
                 strokeMiterlimit="10"
                 strokeLinecap="round" strokeLinejoin="round"
@@ -69,7 +73,10 @@ const HeaderNavigation = ({
             className={s.headerNavListItem}
           >
             <Link href={item.url}>
-              <StyledSpan $isHeaderWhite={isHeaderWhite}>
+              <StyledSpan
+                $isHeaderWhite={isHeaderWhite}
+                $isHome={isHome}
+              >
                 {item.title}
               </StyledSpan>
             </Link>

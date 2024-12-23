@@ -9,10 +9,13 @@ import Burger from './Burger/Burger';
 import HeaderLogo from './HeaderLogo/HeaderLogo';
 import HeaderNavigation from './HeaderNavigation/HeaderNavigation';
 import { clientLoginUrl, newHireLoginUrl } from '@/constants/buttonsLinks';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [ isMenuOpen, setIsMenuOpen ] = useState(false);
   const [ isHeaderWhite, setIsHeaderWhite ] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     if (window.scrollY > 50) {
@@ -21,7 +24,7 @@ const Header = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHome]);
 
   function handleScroll() {
     if (window.scrollY < 50) {
@@ -44,13 +47,17 @@ const Header = () => {
     >
       <div className="container">
         <div className={s.headerWrapper}>
-          <HeaderLogo isHeaderWhite={isHeaderWhite} />
+          <HeaderLogo
+            isHeaderWhite={isHeaderWhite}
+            isHome={isHome}
+          />
 
           <div className={s.headerMain}>
             <HeaderNavigation
               isMenuOpen={isMenuOpen}
               setIsMenuOpen={setIsMenuOpen}
               isHeaderWhite={isHeaderWhite}
+              isHome={isHome}
             />
 
             <div className={s.headerCTAs}>
@@ -72,6 +79,7 @@ const Header = () => {
                 isMenuOpen={isMenuOpen}
                 setIsMenuOpen={setIsMenuOpen}
                 isHeaderWhite={isHeaderWhite}
+                isHome={isHome}
               />
             </div>
           </div>
