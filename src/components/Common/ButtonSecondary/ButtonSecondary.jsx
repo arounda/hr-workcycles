@@ -10,31 +10,65 @@ const StyledButtonSecondary = styled.div`
   justify-content: center;
   border-radius: 100px;
   border: 1px solid;
-  border-color: ${({ $isHeaderWhite }) => (
-    $isHeaderWhite ? 'var(--primary)' : 'var(--white)'
+  border-color: ${({
+    $isHeaderWhite,
+    $isHome,
+    $isHeader
+  }) => (
+    $isHeaderWhite || (!$isHome && $isHeader)
+      ? 'var(--primary)'
+      : 'var(--white)'
   )};
   font-size: 16px;
   font-weight: 500;
   text-align: center;
-  color: ${({ $isHeaderWhite }) => (
-    $isHeaderWhite ? 'var(--primary)' : 'var(--white)'
+  color: ${({
+    $isHeaderWhite,
+    $isHome,
+    $isHeader
+  }) => (
+    $isHeaderWhite || (!$isHome && $isHeader)
+      ? 'var(--primary)'
+      : 'var(--white)'
   )};
   transition: var(--btn-hover-transition);
 
   &:hover {
-    color: ${({ $isHeaderWhite }) => (
-    $isHeaderWhite ? 'var(--white)' : 'var(--primary)'
-  )};
-    background-color: ${({ $isHeaderWhite }) => (
-    $isHeaderWhite ? 'var(--primary)' : 'var(--white)'
-  )};
+    color: ${({
+      $isHeaderWhite,
+      $isHome,
+      $isHeader
+    }) => (
+      $isHeaderWhite || (!$isHome && $isHeader)
+        ? 'var(--white)'
+        : 'var(--primary)'
+    )};
+    background-color: ${({
+      $isHeaderWhite,
+      $isHome,
+      $isHeader
+    }) => (
+      $isHeaderWhite || (!$isHome && $isHeader)
+        ? 'var(--primary)'
+        : 'var(--white)'
+    )};
   }
 `;
 
-const ButtonSecondary = ({ text, link, isHeaderWhite }) => {
+const ButtonSecondary = ({
+  text,
+  link,
+  isHeaderWhite,
+  isHome,
+  isHeader = false,
+}) => {
   return (
     <Link href={link}>
-      <StyledButtonSecondary $isHeaderWhite={isHeaderWhite}>
+      <StyledButtonSecondary
+        $isHeaderWhite={isHeaderWhite}
+        $isHome={isHome}
+        $isHeader={isHeader}
+      >
         {text}
       </StyledButtonSecondary>
     </Link>

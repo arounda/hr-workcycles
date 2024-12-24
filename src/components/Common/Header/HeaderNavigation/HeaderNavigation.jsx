@@ -15,7 +15,7 @@ const StyledSpan = styled.span`
 
 const HeaderNavigation = ({
   isMenuOpen,
-  setIsMenuOpen,
+  onMenuOpen,
   isHeaderWhite,
   isHome
 }) => {
@@ -108,7 +108,7 @@ const HeaderNavigation = ({
                   <Link
                     href={item.url}
                     className={s.headerNavLink}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => onMenuOpen(false)}
                   >
                     {item.title}
                   </Link>
@@ -128,7 +128,7 @@ const HeaderNavigation = ({
                 <Link
                   href={item.url}
                   className={s.headerNavLink}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => onMenuOpen(false)}
                 >
                   {item.title}
                 </Link>
@@ -139,7 +139,7 @@ const HeaderNavigation = ({
 
         <div
           className={s.headerMobileNavOverlay}
-          onClick={() => setIsMenuOpen(false)}
+          onClick={() => onMenuOpen(false)}
         ></div>
       </div>
     </nav>

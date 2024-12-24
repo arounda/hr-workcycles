@@ -24,7 +24,7 @@ const Contact = () => {
 
             <ButtonPrimary
               text='Contact Us'
-              link='#'
+              link='/contact-us'
             />
           </div>
 

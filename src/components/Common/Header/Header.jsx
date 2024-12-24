@@ -34,6 +34,16 @@ const Header = () => {
     }
   }
 
+  function handleMenuOpen(isOpen) {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    setIsMenuOpen(isOpen)
+  }
+
   return (
     <header
       className={s.header}
@@ -55,7 +65,7 @@ const Header = () => {
           <div className={s.headerMain}>
             <HeaderNavigation
               isMenuOpen={isMenuOpen}
-              setIsMenuOpen={setIsMenuOpen}
+              onMenuOpen={handleMenuOpen}
               isHeaderWhite={isHeaderWhite}
               isHome={isHome}
             />
@@ -65,19 +75,23 @@ const Header = () => {
                 text='Client Login'
                 link={clientLoginUrl}
                 isHeaderWhite={isHeaderWhite}
+                isHome={isHome}
+                isHeader={true}
               />
 
               <ButtonPrimary
                 text='New Hire Login'
                 link={newHireLoginUrl}
                 isHeaderWhite={isHeaderWhite}
+                isHome={isHome}
+                isHeader={true}
               />
             </div>
 
             <div className={s.headerBurgerWrapper}>
               <Burger
                 isMenuOpen={isMenuOpen}
-                setIsMenuOpen={setIsMenuOpen}
+                onMenuOpen={handleMenuOpen}
                 isHeaderWhite={isHeaderWhite}
                 isHome={isHome}
               />

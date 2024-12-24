@@ -1,9 +1,9 @@
 export const solutionsUrls = {
-  'e-verify': '#e-verify',
-  'e-onboarding': '#electronic-onboarding',
-  'tax-w-forms': '#tax-withholding-forms',
-  'tax-c-services': '#tax-credit-services',
-  'e-pay-advice': '#electronic-pay-advice',
+  'e-verify': '/solutions/e-verify',
+  'e-onboarding': '/solutions/electronic-onboarding',
+  'tax-w-forms': '/solutions/tax-withholding-forms',
+  'tax-c-services': '/solutions/tax-credit-services',
+  'e-pay-advice': '/solutions/electronic-pay-advice',
 }
 
 export const solutionsTitles = {

@@ -7,11 +7,11 @@ export const nonSolutionsLinks = [
   {
     id: 'ns2',
     title: 'About Us',
-    url: '#about-us',
+    url: '/about-us',
   },
   {
     id: 'ns3',
     title: 'Contact Us',
-    url: '#contact-us',
+    url: '/contact-us',
   },
 ]

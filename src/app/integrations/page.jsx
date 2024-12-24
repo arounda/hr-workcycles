@@ -7,7 +7,7 @@ const Integrations = () => {
     <>
       <Hero />
 
-      {/* <Whitelabel /> */}
+      <Whitelabel />
 
       <Contact />
     </>

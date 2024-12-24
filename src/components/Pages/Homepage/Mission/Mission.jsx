@@ -47,7 +47,7 @@ const Mission = () => {
 
         <div className={s.missionBtnWrapper}>
           <ButtonPrimary
-            link='#'
+            link='/about-us'
             text='Learn More'
             hasIcon={true}
             isButtonBlue={true}

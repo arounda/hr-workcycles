@@ -9,18 +9,45 @@ const StyledButtonPrimary = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  background-color: ${({ $isHeaderWhite, $isButtonBlue }) => (
-    $isHeaderWhite || $isButtonBlue ? 'var(--primary)' : 'var(--white)'
+  background-color: ${({
+    $isHeaderWhite,
+    $isButtonBlue,
+    $isHome,
+    $isHeader,
+  }) => (
+    $isHeaderWhite
+    || $isButtonBlue
+    || (!$isHome && $isHeader)
+      ? 'var(--primary)'
+      : 'var(--white)'
   )};
   border: 1px solid var(--white);
-  border-color: ${({ $isHeaderWhite, $isButtonBlue }) => (
-    $isHeaderWhite || $isButtonBlue ? 'var(--primary)' : 'var(--white)'
+  border-color: ${({
+    $isHeaderWhite,
+    $isButtonBlue,
+    $isHome,
+    $isHeader,
+  }) => (
+    $isHeaderWhite
+    || $isButtonBlue
+    || (!$isHome && $isHeader)
+      ? 'var(--primary)'
+      : 'var(--white)'
   )};
   font-size: 16px;
   font-weight: 500;
   text-align: center;
-  color: ${({ $isHeaderWhite, $isButtonBlue }) => (
-    $isHeaderWhite || $isButtonBlue ? 'var(--white)' : 'var(--primary)'
+  color: ${({
+    $isHeaderWhite,
+    $isButtonBlue,
+    $isHome,
+    $isHeader,
+  }) => (
+    $isHeaderWhite
+    || $isButtonBlue
+    || (!$isHome && $isHeader)
+      ? 'var(--white)'
+      : 'var(--primary)'
   )};
   transition: all var(--btn-hover-transition);
 
@@ -30,17 +57,24 @@ const StyledButtonPrimary = styled.div`
 
   &:hover path {
     stroke: ${({ $isButtonBlue }) => (
-    $isButtonBlue ? 'var(--primary)' : 'var(--white)'
-  )};
+      $isButtonBlue ? 'var(--primary)' : 'var(--white)'
+    )};
   }
 
   &:hover {
-    color: ${({ $isHeaderWhite, $isButtonBlue }) => (
-    $isHeaderWhite || $isButtonBlue ? 'var(--primary)' : 'var(--white)'
-  )};
-    background-color: ${({ $isHeaderWhite, $isButtonBlue }) => (
-    $isHeaderWhite || $isButtonBlue ? 'transparent' : 'transparent'
-  )};
+    color: ${({
+      $isHeaderWhite,
+      $isButtonBlue,
+      $isHome,
+      $isHeader,
+    }) => (
+    $isHeaderWhite
+    || $isButtonBlue
+    || (!$isHome && $isHeader)
+      ? 'var(--primary)'
+      : 'var(--white)'
+    )};
+    background-color: transparent
   }
 `;
 
@@ -50,6 +84,8 @@ const ButtonPrimary = ({
   isHeaderWhite,
   hasIcon = false,
   isButtonBlue = false,
+  isHome,
+  isHeader = false
 }) => {
   const iconColor = isButtonBlue ? 'white' : '#2B34FF';
 
@@ -58,6 +94,8 @@ const ButtonPrimary = ({
       <StyledButtonPrimary
         $isHeaderWhite={isHeaderWhite}
         $isButtonBlue={isButtonBlue}
+        $isHome={isHome}
+        $isHeader={isHeader}
       >
         {text}
 

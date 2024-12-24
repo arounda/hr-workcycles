@@ -19,15 +19,13 @@
   }
 
   @include onLaptop {
-    flex-direction: row-reverse;
     padding: 9rem 4rem;
-    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 8rem;
     background-image: url('../../../../assets/Homepage/connect-bg-laptop.png');
-
   }
 
   @include onLargeDesktop {
-    gap: 8rem;
     padding: 14.6rem 8rem;
     background-image: url('../../../../assets/Homepage/connect-bg-desktop.png');
   }
@@ -69,14 +67,11 @@
 .connectImageWrapper {
   display: grid;
   place-items: center;
+  flex-grow: 1;
 }
 
 .connectImage {
   width: 100%;
   max-width: 450px;
   height: auto;
-
-  @include onLaptop {
-    max-width: 100%;
-  }
 }

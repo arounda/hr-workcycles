@@ -14,7 +14,8 @@
 
   --primary: #2B34FF;
   --light-blue: #F1F8FF;
-  --light-blue-v2: #9CCBFF;
+  // --light-blue-v2: #9CCBFF;
+  --light-blue-v2: #419AFF;
   --white: #ffffff;
   --black: #000000;
   --dark: #090C18;
@@ -137,10 +138,6 @@ main {
   font-weight: 600;
   line-height: 120%;
 
-  &.is-centered {
-    text-align: center;
-  }
-
   @include onTablet {
     font-size: 4.6rem;
   }
@@ -152,10 +149,14 @@ main {
   @include onMediumDesktop {
     font-size: 5rem;
   }
+}
 
-  &.mb-8 {
-    margin-bottom: .8rem;
-  }
+.heading-h5 {
+  color: var(--black);
+  font-family: var(--font-gilroy);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 150%;
 }
 
 .text {
@@ -170,4 +171,12 @@ main {
 
 .is-white {
   color: var(--white);
+}
+
+.mb-8 {
+  margin-bottom: .8rem;
+}
+
+.mb-32 {
+  margin-bottom: 3.2rem;
 }

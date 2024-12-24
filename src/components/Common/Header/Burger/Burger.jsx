@@ -14,7 +14,9 @@ const StyledBurger = styled.button`
   border-radius: 50%;
   border: 1px solid;
   border-color: ${(props) => (
-    (props.$isMenuOpen || props.$isHeaderWhite || !props.$isHome)
+      props.$isMenuOpen
+      || props.$isHeaderWhite
+      || !props.$isHome
       ? "var(--primary)"
       : "var(--white)"
   )};
@@ -23,7 +25,9 @@ const StyledBurger = styled.button`
 
   &:hover {
     background-color: ${(props) => (
-      (props.$isMenuOpen || props.$isHeaderWhite)
+      props.$isMenuOpen
+      || props.$isHeaderWhite
+      || !props.$isHome
         ? "var(--primary)"
         : "var(--white)"
     )};
@@ -31,7 +35,9 @@ const StyledBurger = styled.button`
 
   &:hover div {
     background-color: ${(props) => (
-      (props.$isMenuOpen || props.$isHeaderWhite)
+      props.$isMenuOpen
+      || props.$isHeaderWhite
+      || !props.$isHome
         ? "var(--white)"
         : "var(--primary)"
     )};;
@@ -45,7 +51,9 @@ const StyledBurger = styled.button`
     width: 16px;
     height: 1px;
     background: ${(props) => (
-      (props.$isMenuOpen || props.$isHeaderWhite || !props.$isHome)
+      props.$isMenuOpen
+      || props.$isHeaderWhite
+      || !props.$isHome
         ? "var(--primary)"
         : "var(--white)"
     )};
@@ -82,14 +90,14 @@ const StyledBurger = styled.button`
 
 const Burger = ({
   isMenuOpen,
-  setIsMenuOpen,
+  onMenuOpen,
   isHeaderWhite,
   isHome
  }) => {
   return (
     <StyledBurger
       $isMenuOpen={isMenuOpen}
-      onClick={() => setIsMenuOpen(!isMenuOpen)}
+      onClick={() => onMenuOpen(!isMenuOpen)}
       $isHeaderWhite={isHeaderWhite}
       $isHome={isHome}
     >

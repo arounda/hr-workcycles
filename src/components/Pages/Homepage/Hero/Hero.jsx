@@ -35,7 +35,7 @@ const Hero = () => {
 
               <ButtonPrimary
                 text='Get Started'
-                link={newHireLoginUrl}
+                link='/contact-us'
               />
             </div>
 

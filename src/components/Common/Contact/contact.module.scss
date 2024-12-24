@@ -20,15 +20,13 @@
   }
 
   @include onLaptop {
-    flex-direction: row;
     padding: 6.8rem 4rem;
-    justify-content: center;
+    flex-direction: row;
+    gap: 8rem;
     background-image: url('../../../assets/Homepage/contact-bg-laptop.png');
-
   }
 
   @include onLargeDesktop {
-    gap: 8rem;
     padding: 11.2rem 8rem;
     background-image: url('../../../assets/Homepage/contact-bg-desktop.png');
   }
@@ -79,22 +77,11 @@
 .contactImageWrapper {
   display: grid;
   place-items: center;
-
-  @include onLaptop {
-    order: 0;
-  }
-
-  @include onLargeDesktop {
-    flex-grow: 1;
-  }
+  flex-grow: 1;
 }
 
 .contactImage {
   width: 100%;
-  max-width: 413px;
+  max-width: 430px;
   height: auto;
-
-  @include onLaptop {
-    max-width: 100%;
-  }
 }
